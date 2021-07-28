@@ -1,0 +1,106 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/lewis/UnityProjects/Platkemon
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+52811
+Successfully changed project path to: /Users/lewis/UnityProjects/Platkemon
+/Users/lewis/UnityProjects/Platkemon
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 351.27 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.1f1 (77a89f25062f)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/lewis/UnityProjects/Platkemon/Assets
+GfxDevice: creating device client; threaded=0
+2021-07-23 22:28:57.090 Unity[5814:228059] Color LCD preferred device: Intel Iris Graphics (low power)
+2021-07-23 22:28:57.090 Unity[5814:228059] Metal devices available: 1
+2021-07-23 22:28:57.090 Unity[5814:228059] 0: Intel Iris Graphics (low power)
+2021-07-23 22:28:57.090 Unity[5814:228059] Using device Intel Iris Graphics (low power)
+Initializing Metal device caps: Intel Iris Graphics
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56814
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.1f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.002597 seconds.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 93.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.929 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001276 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 66.25 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.938 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1813 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 142.8 MB.
+System memory in use after: 142.8 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2257.
+Total: 7.128381 ms (FindLiveObjects: 0.591647 ms CreateObjectMapping: 0.075084 ms MarkObjects: 5.789543 ms  DeleteObjects: 0.670407 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/New Bark Town.unity
+  artifactKey: Guid(c9a83fa3653804c19a0ec92c4c0e201f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/New Bark Town.unity using Guid(c9a83fa3653804c19a0ec92c4c0e201f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7bad184a2a0ce7bbceac1f22d0575f0') in 0.021208 seconds
+  Import took 0.027387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.041129 seconds.
+  path: Assets/Scenes/Violet City.unity
+  artifactKey: Guid(56ee23523116c4df3bfc1479e7495c5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Violet City.unity using Guid(56ee23523116c4df3bfc1479e7495c5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e573dacb3c610a03982f8edd49dd6547') in 0.003294 seconds
+  Import took 0.008786 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 115.828636 seconds.
+  path: Assets/Prefabs/MainCamera.prefab
+  artifactKey: Guid(c5dbc6e1034f646889bbc29c26ecfb7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MainCamera.prefab using Guid(c5dbc6e1034f646889bbc29c26ecfb7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2aa20b9854bee0ac9d122da1a70c111') in 1.648417 seconds
+  Import took 1.654800 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.572889 seconds.
+  path: Assets/PlayerAssets/Player.prefab
+  artifactKey: Guid(653df1db88bd144c2af287a47bbcfe14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerAssets/Player.prefab using Guid(653df1db88bd144c2af287a47bbcfe14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '019bd38fad36a1b38434203823bb72ea') in 0.200800 seconds
+  Import took 0.208029 seconds .
+
