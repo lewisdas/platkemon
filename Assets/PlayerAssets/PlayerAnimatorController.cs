@@ -5,31 +5,38 @@ using UnityEngine;
 public class PlayerAnimatorController : MonoBehaviour
 {
     public Animator anim;
+    public SpriteRenderer spriteRenderer;
 
     private Rigidbody2D _rb;
-    private ActivityState _prevState;
+    private PlayerState.ActivityState _prevState;
 
     private void Start()
     {
         _rb = GetComponentInParent<Rigidbody2D>();
     }
 
-    private void Update()
+    /// <summary>
+    /// Update animator and flip sprite direction as needed.
+    /// </summary>
+    public void HandleUpdate(PlayerInputController.InputDesires input)
     {
         // check for state changes
-        var state = PlayerState.Instance.state;
-        var changedStateThisFrame = false;
-        if (state != _prevState)
-        {
-            _prevState = state;
-            changedStateThisFrame = true;
-        }
+        var state = PlayerState.Instance.activityState;
+        var changedStateThisFrame = state != _prevState;
+        _prevState = state;
         
-        // handle animation changes
-        anim.SetBool("isWalking", PlayerState.Instance.state == ActivityState.Walking);
+        // set animation properties
         anim.SetFloat("yVelocity", _rb.velocity.y);
-        anim.SetBool("isMovingOnVines", PlayerState.Instance.isMovingOnVines);
-        if (changedStateThisFrame && state == ActivityState.Climbing)
+        anim.SetFloat("xVelocityAbs", Mathf.Abs(_rb.velocity.x));
+        
+        anim.SetBool("isGrounded", state == PlayerState.ActivityState.Grounded);
+        anim.SetBool("isPressingDPad", input.movementInput != Vector2.zero);
+        
+        if (changedStateThisFrame && state == PlayerState.ActivityState.Climbing)
             anim.SetTrigger("isClimbing");
+        
+        // flip sprite
+        if (input.movementInput != Vector2.zero)
+            spriteRenderer.flipX = input.movementInput.x < 0;
     }
 }

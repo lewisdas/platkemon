@@ -10,7 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8038016392266936209}
   - component: {fileID: 6362876820981303360}
+  - component: {fileID: 2798236276114597168}
   - component: {fileID: 5064200901651598044}
+  - component: {fileID: 562533322011811863}
+  - component: {fileID: 1825350978495831327}
+  - component: {fileID: 1651695246190846514}
   - component: {fileID: 5901644007600673457}
   - component: {fileID: 4369789088287762362}
   - component: {fileID: 1420653020881320308}
@@ -48,8 +52,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41aad4c4eaa54d1cbc074aa07a6d69d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
-  isMovingOnVines: 0
+  controlState: 0
+  activityState: 2
+--- !u!114 &2798236276114597168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2217342279256070827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b284de553171a4e40b1a498baa6ba9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5064200901651598044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,25 +78,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eaf4570b657642b1a3a72803f10ca21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
+  walkSpeed: 6
+  runSpeed: 9
   movementSmoothing: 0.15
-  vineMoveSpeed: 2.5
-  jumpForce: 8.5
-  jumpExtensionDuration: 0.35
-  baseGravityScale: 2
-  freeFallGravityScale: 3
+  hopShadow: {fileID: 7340704965805236803}
+  ledgesCollider: {fileID: 0}
+--- !u!114 &562533322011811863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2217342279256070827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c1d7b1f34c545e6aac232b1e8710fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 9.1
+  jumpExtensionDuration: 0.33
   platformsLayer:
     serializedVersion: 2
     m_Bits: 512
   ledgesLayer:
     serializedVersion: 2
     m_Bits: 2048
+--- !u!114 &1825350978495831327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2217342279256070827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a76bb9cf0e848d9a3cff41eb3a1408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformsLayer:
+    serializedVersion: 2
+    m_Bits: 512
+--- !u!114 &1651695246190846514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2217342279256070827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8924ef5927c649629e17f024bf9d020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vineMoveSpeed: 2.5
   grassLayer:
     serializedVersion: 2
     m_Bits: 1024
-  hopShadow: {fileID: 7340704965805236803}
-  ledgesCollider: {fileID: 0}
-  spriteRenderer: {fileID: 9165251173346901368}
 --- !u!114 &5901644007600673457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1465019387}
+  spriteRenderer: {fileID: 9165251173346901368}
 --- !u!50 &4369789088287762362
 Rigidbody2D:
   serializedVersion: 4
@@ -106,10 +160,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1.5
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
