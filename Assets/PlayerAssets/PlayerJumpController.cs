@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerJumpController : MonoBehaviour
 {
     [Header("Jump Settings")]
-    public float jumpForce = 8f;
-    public float jumpExtensionDuration = .5f;
+    public float jumpForce = 9.1f;
+    public float maxJumpExtensionDuration = .33f;
+    public float minJumpExtensionDuration = .2f;
     
     [Header("Layers")]
     public LayerMask platformsLayer;
@@ -33,7 +34,15 @@ public class PlayerJumpController : MonoBehaviour
     public void InitiateJump()
     {
         PlayerState.Instance.activityState = PlayerState.ActivityState.Jumping;
-        _jumpExtensionTimer = jumpExtensionDuration;
+
+        // increase jump thrust duration based on horizontal speed
+        _jumpExtensionTimer = ExtensionMethods.Remap(
+            Mathf.Max(Mathf.Abs(_rb.velocity.x), _movementController.walkSpeed),
+            _movementController.walkSpeed,
+            _movementController.runSpeed,
+            minJumpExtensionDuration,
+            maxJumpExtensionDuration);
+        Debug.Log((_jumpExtensionTimer, Mathf.Abs(_rb.velocity.x)));
     }
 
     /// <summary>
@@ -41,7 +50,7 @@ public class PlayerJumpController : MonoBehaviour
     /// </summary>
     public void HandleUpdate(PlayerInputController.InputDesires input)
     {
-        _movementController.MoveHorizontally(input.movementInput.x, input.isRunHeld);
+        _movementController.MoveHorizontally(input.movementInput.x / 2, input.isRunHeld);
         
         // stop boosting if jump is released
         if (!input.isJumpHeld)

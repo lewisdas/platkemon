@@ -10,6 +10,7 @@ public class PlayerMovementController : MonoBehaviour
     public float walkSpeed = 6f;
     public float runSpeed = 8f;
     public float movementSmoothing = 4f;
+    public float aerialDamping = .75f;
 
     [Header("References")] 
     public GameObject hopShadow;
@@ -49,6 +50,8 @@ public class PlayerMovementController : MonoBehaviour
     public void MoveHorizontally(float horizontalInput, bool isRunHeld)
     {
         var maxMoveSpeed = (isRunHeld) ? runSpeed : walkSpeed;
+        if (PlayerState.Instance.activityState != PlayerState.ActivityState.Grounded)
+            maxMoveSpeed *= aerialDamping;
         var targetVelocity = new Vector2(horizontalInput * maxMoveSpeed, _rb.velocity.y);
         _rb.velocity = Vector2.SmoothDamp(_rb.velocity, targetVelocity, ref _velocity, movementSmoothing);
     }

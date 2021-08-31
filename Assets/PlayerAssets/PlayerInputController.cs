@@ -40,7 +40,7 @@ public class PlayerInputController : MonoBehaviour
         _inputDesires = new InputDesires();
     }
     
-    void Update()
+    public void HandleUpdate()
     {
         if (PlayerState.Instance.controlState == PlayerState.ControlState.FreeMove)
         {

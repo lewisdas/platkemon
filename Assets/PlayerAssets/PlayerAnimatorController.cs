@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,7 @@ public class PlayerAnimatorController : MonoBehaviour
         // set animation properties
         anim.SetFloat("yVelocity", _rb.velocity.y);
         anim.SetFloat("xVelocityAbs", Mathf.Abs(_rb.velocity.x));
+        anim.SetBool("isTurning", input.movementInput.x * _rb.velocity.x < 0);
         
         anim.SetBool("isGrounded", state == PlayerState.ActivityState.Grounded);
         anim.SetBool("isPressingDPad", input.movementInput != Vector2.zero);
@@ -36,7 +38,7 @@ public class PlayerAnimatorController : MonoBehaviour
             anim.SetTrigger("isClimbing");
         
         // flip sprite
-        if (input.movementInput != Vector2.zero)
-            spriteRenderer.flipX = input.movementInput.x < 0;
+        if (input.movementInput != Vector2.zero && Mathf.Abs(_rb.velocity.x) > .1f)
+            spriteRenderer.flipX = _rb.velocity.x < 0;
     }
 }
