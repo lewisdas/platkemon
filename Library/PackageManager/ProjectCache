@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637634265590000000
+      ticks: 637659690300000000
     m_Hash: 2644388554
   m_LockFileStatus:
     m_FilePath: /Users/lewis/Documents/GitHub/platkemon/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637634265700000000
+      ticks: 637659690300000000
     m_Hash: 3095013218
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -79,6 +79,8 @@ m_ResolvedPackages:
     - 3.2.5
     - 3.2.6
     - 3.2.9
+    - 3.2.10
+    - 3.2.11
     - 4.0.0
     - 4.0.1
     - 4.1.0
@@ -97,17 +99,20 @@ m_ResolvedPackages:
     - 5.0.4
     - 5.0.5
     - 5.0.6
+    - 5.0.7
     - 6.0.0-pre.1
     - 6.0.0-pre.2
     - 6.0.1
     - 6.0.3
     - 6.0.4
+    - 6.0.5
     - 7.0.0-pre.2
     - 7.0.0-pre.3
     compatible:
     - 6.0.3
     - 6.0.4
-    verified: 6.0.4
+    - 6.0.5
+    verified: 6.0.5
   dependencies:
   - name: com.unity.2d.common
     version: 5.0.0
@@ -207,9 +212,11 @@ m_ResolvedPackages:
     - 5.0.0-pre.1
     - 5.0.0-pre.2
     - 5.0.0
+    - 5.0.1
     compatible:
     - 5.0.0
-    verified: 5.0.0
+    - 5.0.1
+    verified: 5.0.1
   dependencies: []
   resolvedDependencies: []
   keywords:
@@ -466,6 +473,7 @@ m_ResolvedPackages:
     - 3.0.14
     - 3.0.15
     - 3.0.16
+    - 3.0.17
     - 4.0.0
     - 4.0.1
     - 4.0.2
@@ -483,6 +491,7 @@ m_ResolvedPackages:
     - 5.1.1
     - 5.1.2
     - 5.1.3
+    - 5.1.4
     - 6.0.0-pre.1
     - 6.0.0-pre.2
     - 6.0.0
@@ -650,6 +659,8 @@ m_ResolvedPackages:
     - 1.5.7
     - 1.6.0
     - 1.7.1
+    - 1.8.0
+    - 1.9.0
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -664,6 +675,8 @@ m_ResolvedPackages:
     - 1.5.7
     - 1.6.0
     - 1.7.1
+    - 1.8.0
+    - 1.9.0
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -986,11 +999,13 @@ m_ResolvedPackages:
     - 1.1.24
     - 1.1.26
     - 1.1.27
+    - 1.1.29
     compatible:
     - 1.1.24
     - 1.1.26
     - 1.1.27
-    verified: 1.1.27
+    - 1.1.29
+    verified: 1.1.29
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
@@ -1108,6 +1123,7 @@ m_ResolvedPackages:
     - 1.5.4
     - 1.5.5
     - 1.5.6
+    - 1.6.0-preview.1
     - 2.0.0
     - 2.0.1-preview.1
     - 2.0.1
@@ -1129,6 +1145,7 @@ m_ResolvedPackages:
     - 2.1.4
     - 2.1.5
     - 2.1.6
+    - 2.2.0-preview.1
     - 3.0.0-preview.1
     - 3.0.0-preview.3
     - 3.0.0-preview.4
@@ -1146,8 +1163,10 @@ m_ResolvedPackages:
     - 3.0.4
     - 3.0.5
     - 3.0.6
+    - 3.2.0-pre.1
     compatible:
     - 3.0.6
+    - 3.2.0-pre.1
     verified: 3.0.6
   dependencies:
   - name: com.unity.ugui
@@ -1273,6 +1292,7 @@ m_ResolvedPackages:
     - 1.6.0-pre.4
     - 1.6.0-pre.5
     - 1.6.1
+    - 1.6.2
     compatible:
     - 1.5.5
     - 1.5.6
@@ -1281,6 +1301,7 @@ m_ResolvedPackages:
     - 1.6.0-pre.4
     - 1.6.0-pre.5
     - 1.6.1
+    - 1.6.2
     verified: 1.5.6
   dependencies:
   - name: com.unity.modules.director

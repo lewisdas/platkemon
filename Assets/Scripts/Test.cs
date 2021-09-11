@@ -13,6 +13,6 @@ public class Test : MonoBehaviour
     
     public void InitializeDialogue()
     {
-        GameManager.instance.DialogueSystem.Initialize(dialogue);
+        GameManager.instance.dialogueSystem.Initialize(dialogue);
     }
 }

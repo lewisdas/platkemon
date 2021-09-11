@@ -5264,6 +5264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92727ffe99664df8974ddc1246f94f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textWriteDelay: 0.05
   dialogueBox: {fileID: 1481769073}
   textBox: {fileID: 1263095270}
 --- !u!4 &583417463
@@ -5368,8 +5369,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     lines:
-    - I eat
-    - butt
+    - In Chinese they don't say "I love you"
+    - They say "I eat butt"
+    - And I think that's beautiful
 --- !u!4 &1133057419
 Transform:
   m_ObjectHideFlags: 0
@@ -5452,11 +5454,11 @@ RectTransform:
   m_Father: {fileID: 1481769074}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0, y: 1}
+  m_SizeDelta: {x: -48, y: -48}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1263095270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5479,8 +5481,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 02534d410a1cf48f98cef6ad046ff877, type: 2}
+  m_sharedMaterial: {fileID: -5386567207353049145, guid: 02534d410a1cf48f98cef6ad046ff877, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5504,8 +5506,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5516,7 +5518,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 24
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -5611,6 +5613,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1323078550 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2798236276114597168, guid: 653df1db88bd144c2af287a47bbcfe14, type: 3}
+  m_PrefabInstance: {fileID: 1474161637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323078541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b284de553171a4e40b1a498baa6ba9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1416673955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8038016392266936209, guid: 653df1db88bd144c2af287a47bbcfe14, type: 3}
@@ -5694,7 +5707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1481769074
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5782,7 +5795,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f27b76bb4bd6499b9ac3a83e5db96a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueSystem: {fileID: 583417462}
+  dialogueSystem: {fileID: 583417462}
+  playerInputController: {fileID: 1323078550}
+  state: 0
 --- !u!4 &2028032623
 Transform:
   m_ObjectHideFlags: 0

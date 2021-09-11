@@ -1,8 +1,7 @@
-using System;
 using UnityEngine;
 
-[Serializable]
-public class Dialogue
+[System.Serializable]
+public class Dialogue: ScriptableObject
 {
     public string[] lines;
 }

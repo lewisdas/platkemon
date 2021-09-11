@@ -7,27 +7,39 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [Header("Game Systems")]
-    public DialogueSystem DialogueSystem;
-    public PlayerInputController PlayerInputController;
+    public DialogueSystem dialogueSystem;
+    public PlayerInputController playerInputController;
 
-    private GameState _state = GameState.PlayerRoam;
+    [HideInInspector] public GameState state = GameState.PlayerRoam;
 
-    void Awake()
+    private void Awake()
     {
-        if (this != null)
+        if (instance != null)
             Destroy(gameObject);
         instance = this;
+
+        dialogueSystem.dialogueFinished += OnDialogueFinished;
+    }
+
+    private void OnDialogueFinished()
+    {
+        state = GameState.PlayerRoam;
     }
 
     void Update()
     {
-        if (_state == GameState.PlayerRoam)
-            PlayerInputController.HandleUpdate();
-        else if (_state == GameState.Dialogue)
-            DialogueSystem.HandleUpdate();
+        if (state == GameState.PlayerRoam)
+            playerInputController.HandleUpdate();
+        else if (state == GameState.Dialogue)
+            dialogueSystem.HandleUpdate();
     }
 
-    enum GameState
+    public void ChangeStateToDialogue()
+    {
+        state = GameState.Dialogue;
+    }
+
+    public enum GameState
     {
         PlayerRoam,
         Dialogue

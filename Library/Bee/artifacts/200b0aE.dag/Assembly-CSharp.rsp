@@ -346,6 +346,7 @@
 "Assets/Scripts/Camera/CameraController.cs"
 "Assets/Scripts/Camera/FollowPlayer.cs"
 "Assets/Scripts/Dialogue/Dialogue.cs"
+"Assets/Scripts/Dialogue/DialogueData.cs"
 "Assets/Scripts/Dialogue/DialogueSystem.cs"
 "Assets/Scripts/ExtensionMethods.cs"
 "Assets/Scripts/GameManager.cs"
