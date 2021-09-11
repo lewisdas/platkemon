@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    public Dialogue dialogue;
+    public Cutscene cutscene;
 
     void Start()
     {
-        InitializeDialogue();
-    }
-    
-    public void InitializeDialogue()
-    {
-        GameManager.instance.dialogueSystem.Initialize(dialogue);
+        GameManager.instance.cutsceneController.RunCutscene(cutscene);
     }
 }

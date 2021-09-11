@@ -5109,7 +5109,7 @@ RectTransform:
   m_Children:
   - {fileID: 341570191}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5235,52 +5235,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &583417461
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 583417463}
-  - component: {fileID: 583417462}
-  m_Layer: 0
-  m_Name: Dialogue System
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &583417462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583417461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f92727ffe99664df8974ddc1246f94f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textWriteDelay: 0.05
-  dialogueBox: {fileID: 1481769073}
-  textBox: {fileID: 1263095270}
---- !u!4 &583417463
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583417461}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &704425412
 GameObject:
   m_ObjectHideFlags: 0
@@ -5367,11 +5321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a881e791a9de445b6aabe398db809aef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    lines:
-    - In Chinese they don't say "I love you"
-    - They say "I eat butt"
-    - And I think that's beautiful
+  cutscene: {fileID: 11400000, guid: cd9f70646ae2c4c41a067c1493521bb0, type: 2}
 --- !u!4 &1133057419
 Transform:
   m_ObjectHideFlags: 0
@@ -5384,7 +5334,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1172255316 stripped
 GameObject:
@@ -5629,6 +5579,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8038016392266936209, guid: 653df1db88bd144c2af287a47bbcfe14, type: 3}
   m_PrefabInstance: {fileID: 1474161637}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1464813392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464813395}
+  - component: {fileID: 1464813394}
+  - component: {fileID: 1464813393}
+  m_Layer: 0
+  m_Name: Cutscene Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1464813393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464813392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92727ffe99664df8974ddc1246f94f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textWriteDelay: 0.05
+  dialogueBox: {fileID: 1481769073}
+  textBox: {fileID: 1263095270}
+--- !u!114 &1464813394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464813392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6f5dd1ca3d54ed58ae2d5c8abdf87b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1464813395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464813392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1474161637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5795,7 +5804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f27b76bb4bd6499b9ac3a83e5db96a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueSystem: {fileID: 583417462}
+  cutsceneController: {fileID: 1464813394}
   playerInputController: {fileID: 1323078550}
   state: 0
 --- !u!4 &2028032623
@@ -5876,7 +5885,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1121137548696083104
 PrefabInstance:
