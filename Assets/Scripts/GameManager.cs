@@ -6,42 +6,40 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [Header("Game Systems")]
-    public DialogueSystem dialogueSystem;
+    [Header("Game Systems")] 
+    public CutsceneController cutsceneController;
     public PlayerInputController playerInputController;
 
     [HideInInspector] public GameState state = GameState.PlayerRoam;
 
+    // -------- Unity Events ---------------------------------------------------
+    
     private void Awake()
     {
         if (instance != null)
             Destroy(gameObject);
         instance = this;
-
-        dialogueSystem.dialogueFinished += OnDialogueFinished;
     }
 
-    private void OnDialogueFinished()
-    {
-        state = GameState.PlayerRoam;
-    }
-
-    void Update()
+    private void Update()
     {
         if (state == GameState.PlayerRoam)
             playerInputController.HandleUpdate();
-        else if (state == GameState.Dialogue)
-            dialogueSystem.HandleUpdate();
+        else if (state == GameState.Cutscene) 
+            cutsceneController.HandleUpdate();
     }
+    
+    // -------- Public Methods -------------------------------------------------
 
-    public void ChangeStateToDialogue()
+    public void RunCutscene(Cutscene cutscene)
     {
-        state = GameState.Dialogue;
+        cutsceneController.RunCutscene(cutscene);
     }
+    
 
     public enum GameState
     {
         PlayerRoam,
-        Dialogue
+        Cutscene
     }
 }

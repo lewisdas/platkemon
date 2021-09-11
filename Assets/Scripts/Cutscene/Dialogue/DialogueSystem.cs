@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DialogueSystem : MonoBehaviour
+public class DialogueSystem : CutsceneSystem
 {
     public event Action dialogueFinished;
     public float textWriteDelay = 0.05f;
@@ -14,19 +14,21 @@ public class DialogueSystem : MonoBehaviour
     public TextMeshProUGUI textBox;
 
     private string[] _lines;
-    private int _currLine = -1;
+    private int _currLine;
     private bool _isWritingDialogue;
-    
-    public void Initialize(Dialogue dialogue)
+
+    public override void Run(CutsceneSegment segment)
     {
-        GameManager.instance.state = GameManager.GameState.Dialogue;
+        GameManager.instance.state = GameManager.GameState.Cutscene;
         dialogueBox.SetActive(true);
+        var dialogue = (Dialogue) segment;
         _lines = dialogue.lines;
+        _currLine = -1;
 
         WriteNextLine();
     }
 
-    public void HandleUpdate()
+    public override void HandleUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
