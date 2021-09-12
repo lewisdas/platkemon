@@ -22,4 +22,10 @@ public class NPCAnimatorController : MonoBehaviour
         _anim.SetFloat("moveX", direction.x);
         _anim.SetFloat("moveY", direction.y);
     }
+
+    public void SetDirection(Vector2 direction)
+    {
+        _anim.SetFloat("moveX", direction.x);
+        _anim.SetFloat("moveY", direction.y);
+    }
 }

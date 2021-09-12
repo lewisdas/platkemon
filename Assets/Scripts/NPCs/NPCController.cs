@@ -18,27 +18,13 @@ public class NPCController : MonoBehaviour
         
         _directionVectors = new Dictionary<Direction, Vector2>
         {
-            {Direction.Left, Vector2.left},
+            {Direction.Left,  Vector2.left},
             {Direction.Right, Vector2.right},
-            {Direction.Up, Vector2.up},
-            {Direction.Down, Vector2.down}
+            {Direction.Up,    Vector2.up},
+            {Direction.Down,  Vector2.down}
         };
 
         FinishedWalking += () => Debug.Log("finished walking.");
-    }
-
-    void Start()
-    {
-        // just a test
-        var steps = new Direction[]
-        {
-            Direction.Right,
-            Direction.Right,
-            Direction.Down,
-            Direction.Left,
-            Direction.Up
-        };
-        Move(steps);
     }
 
     public void Move(Direction[] steps, int currentStep = 0)
@@ -70,6 +56,14 @@ public class NPCController : MonoBehaviour
         _anim.StopWalking();
         transform.position = endPos;
         callback();
+    }
+
+    /// <summary>
+    /// Set direction without movement.
+    /// </summary>
+    public void SetDirection(Direction direction)
+    {
+        _anim.SetDirection(_directionVectors[direction]);
     }
 
     public enum Direction

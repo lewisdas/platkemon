@@ -6,6 +6,7 @@ public class CutsceneController : MonoBehaviour
     // subsystems
     private DialogueSystem _dialogueSystem;
     private PauseSystem _pauseSystem;
+    private NPCWalkSystem _npcWalkSystem;
     
     // trackers
     private CutsceneSegment[] _segments;
@@ -21,11 +22,13 @@ public class CutsceneController : MonoBehaviour
     {
         // grab references
         _dialogueSystem = GetComponent<DialogueSystem>();
-        _pauseSystem = GetComponent<PauseSystem>();
+        _pauseSystem    = GetComponent<PauseSystem>();
+        _npcWalkSystem  = GetComponent<NPCWalkSystem>();
 
         // add listeners
         _dialogueSystem.dialogueFinished += OnSegmentFinished;
-        _pauseSystem.finishedPausing += OnSegmentFinished;
+        _pauseSystem.finishedPausing     += OnSegmentFinished;
+        _npcWalkSystem.FinishedNPCWalk   += OnSegmentFinished;
     }
     
     // -------- Public Methods -------------------------------------------------
@@ -58,6 +61,10 @@ public class CutsceneController : MonoBehaviour
             case Pause pause:
                 _currentSystem = _pauseSystem;
                 _currentSystem.Run(pause);
+                break;
+            case NPCWalk npcWalk:
+                _currentSystem = _npcWalkSystem;
+                _currentSystem.Run(npcWalk);
                 break;
         }
     }

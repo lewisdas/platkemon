@@ -70,6 +70,9 @@
      <Compile Include="Assets\Scripts\Cutscene\Pause\PauseSystem.cs" />
      <Compile Include="Assets\Scripts\NPCs\NPCAnimatorController.cs" />
      <Compile Include="Assets\Scripts\NPCs\NPCController.cs" />
+     <Compile Include="Assets\Scripts\Cutscene\NPCWalk\NPCWalk.cs" />
+     <Compile Include="Assets\Scripts\Cutscene\NPCWalk\NPCWalkData.cs" />
+     <Compile Include="Assets\Scripts\Cutscene\NPCWalk\NPCWalkSystem.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
