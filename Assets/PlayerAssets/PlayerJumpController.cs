@@ -42,7 +42,7 @@ public class PlayerJumpController : MonoBehaviour
             _movementController.runSpeed,
             minJumpExtensionDuration,
             maxJumpExtensionDuration);
-        Debug.Log((_jumpExtensionTimer, Mathf.Abs(_rb.velocity.x)));
+        //Debug.Log((_jumpExtensionTimer, Mathf.Abs(_rb.velocity.x)));
     }
 
     /// <summary>

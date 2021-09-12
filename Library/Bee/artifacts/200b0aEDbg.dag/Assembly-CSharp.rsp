@@ -359,6 +359,8 @@
 "Assets/Scripts/ExtensionMethods.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Ledge.cs"
+"Assets/Scripts/NPCs/NPCAnimatorController.cs"
+"Assets/Scripts/NPCs/NPCController.cs"
 "Assets/Scripts/Test.cs"
 -langversion:8.0
 

@@ -68,6 +68,8 @@
      <Compile Include="Assets\Scripts\Cutscene\Pause\Pause.cs" />
      <Compile Include="Assets\Scripts\Cutscene\Pause\PauseData.cs" />
      <Compile Include="Assets\Scripts\Cutscene\Pause\PauseSystem.cs" />
+     <Compile Include="Assets\Scripts\NPCs\NPCAnimatorController.cs" />
+     <Compile Include="Assets\Scripts\NPCs\NPCController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
