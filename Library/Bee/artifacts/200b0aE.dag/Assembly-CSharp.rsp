@@ -353,12 +353,17 @@
 "Assets/Scripts/Cutscene/Dialogue/Dialogue.cs"
 "Assets/Scripts/Cutscene/Dialogue/DialogueData.cs"
 "Assets/Scripts/Cutscene/Dialogue/DialogueSystem.cs"
+"Assets/Scripts/Cutscene/NPCWalk/NPCWalk.cs"
+"Assets/Scripts/Cutscene/NPCWalk/NPCWalkData.cs"
+"Assets/Scripts/Cutscene/NPCWalk/NPCWalkSystem.cs"
 "Assets/Scripts/Cutscene/Pause/Pause.cs"
 "Assets/Scripts/Cutscene/Pause/PauseData.cs"
 "Assets/Scripts/Cutscene/Pause/PauseSystem.cs"
 "Assets/Scripts/ExtensionMethods.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Ledge.cs"
+"Assets/Scripts/NPCs/NPCAnimatorController.cs"
+"Assets/Scripts/NPCs/NPCController.cs"
 "Assets/Scripts/Test.cs"
 -langversion:8.0
 

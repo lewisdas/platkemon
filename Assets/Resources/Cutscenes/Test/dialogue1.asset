@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: dialogue1
   m_EditorClassIdentifier: 
   lines:
-  - i am smart
-  - no i am not
+  - hi im pkmn trainer

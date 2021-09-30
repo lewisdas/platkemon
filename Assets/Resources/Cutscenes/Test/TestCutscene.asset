@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TestCutscene
   m_EditorClassIdentifier: 
   segments:
+  - {fileID: 11400000, guid: 73b66c738b47c49119dd8103172d7554, type: 2}
   - {fileID: 11400000, guid: a419dca1769724922bb8cec10c79fe78, type: 2}
   - {fileID: 11400000, guid: 0ebb9a3e7ef34419fa1dba95c4709bc9, type: 2}
   - {fileID: 11400000, guid: 57671535829964a38ac64e5fe3a354d2, type: 2}
